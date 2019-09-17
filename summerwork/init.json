@@ -1,0 +1,36 @@
+{
+    "ONELEVEL":{
+        "SLC":{
+            "CACHESIZE":"24KB",
+            "WAY":1,
+            "CACHELINESZ":"64B",
+            "REPLACEMENT":"LRU",
+            "TYPE":"CMLC",
+            "ADDRBITS":32,
+            "WRITE_LATENCY":1.0,
+            "READ_LATENCY":1.00
+        }
+    },
+    "TWOLEVEL":{
+        "L1":{
+            "SLC":["2MB",1,"64B","LRU","SLC",32,7,23,23,2.0,3.0,3.0]
+        },
+        "L2":{
+            "SLC":["4MB",4,"64B","LRU","SLC",32,7,23,23,2.0,3.0,3.0],
+            "CMLC":["8MB",4,"64B","LRU","CMLC",32,18,23,46,1.2,1.92,3.192],
+            "TSTM":["8MB",4,"96B","LRU","TSTM",32,20,23,46,1.8,1.92,3.192]
+        }
+    },
+    "GENERAL":{
+        "CACHE_HIERARRCHY" :2,
+        "TRACE_PATH" : "trace/",
+        "TRACE_ALL_RUN" : "False",
+        "TRACE_NAME" : "bitcount_V2.txt",
+        "OUTPUT_PATH" : "OutputFile",
+        "OUTPUT_NAME" : "None",
+        "HT_ENERGY" : 3.192,
+        "ST_ENERGY" : 1.92,
+        "ZT_ENERGY" : 0.0,
+        "TT_ENERGY" : 5.112
+    }
+}
